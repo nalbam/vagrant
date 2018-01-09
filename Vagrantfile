@@ -3,8 +3,7 @@
 
 Vagrant.configure("2") do |config|
     # base box
-    config.vm.box     = "CentOS-6.6-x86_64"
-    config.vm.box_url = "http://toast.yanolja.com/vagrant/centos-6.6-x86_64.box"
+    config.vm.box = "centos/6"
 
     # network adapter
     config.vm.network "private_network", ip: "192.168.33.10"
@@ -24,10 +23,10 @@ Vagrant.configure("2") do |config|
     config.vm.synced_folder "..", "/data"
 
     # install package
-    config.vm.provision "shell", path: "./bin/0.init.sh"
-    config.vm.provision "shell", path: "./bin/2.config.sh"
-    config.vm.provision "shell", path: "./bin/3.library.sh"
-    config.vm.provision "shell", path: "./bin/6.php55.sh"
-    config.vm.provision "shell", path: "./bin/8.composer.sh"
-    config.vm.provision "shell", path: "./bin/9.vhost.sh"
+    #config.vm.provision "shell", path: "./bin/0.init.sh"
+    #config.vm.provision "shell", path: "./bin/2.config.sh"
+    #config.vm.provision "shell", path: "./bin/3.library.sh"
+    #config.vm.provision "shell", path: "./bin/6.php55.sh"
+    #config.vm.provision "shell", path: "./bin/8.composer.sh"
+    #config.vm.provision "shell", path: "./bin/9.vhost.sh"
 end
